@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+</head>
+<body>
+Cool calendar <div th:text="${name}"/>
+
+<!-- monthly calendar control placeholder -->
+<div id="dp"></div>
+
+<!-- DayPilot library -->
+<script src="js/daypilot/daypilot-all.min.js"></script>
+
+<!-- calendar initialization and config -->
+<script>
+
+    var dp = new DayPilot.Month("dp");
+    dp.init();
+
+</script>
+</body>
+</html>
