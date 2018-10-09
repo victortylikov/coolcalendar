@@ -13,12 +13,12 @@ import java.util.Map;
 public class CalendarController {
 
     @RequestMapping("/")
-    public String home(Map<String, Object> model){
+    public String index(Map<String, Object> model){
         LocalDate currentDate = LocalDate.now();
         Month month = currentDate.getMonth();
         Integer monthLength = month.length(currentDate.isLeapYear());
         model.put("monthLength", monthLength);
-        return "home";
+        return "index";
     }
 
 }
