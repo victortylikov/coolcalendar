@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <script type="text/javascript" src="/javascript/dayScript.js"></script>
+    <script th:inline="javascript">window.onload = function() {myFunction([[${monthLength}]])}</script>
+</head>
+<body>
+    <span th:text="'Number of days: ' + ${monthLength}"></span>
+    <div id="mainContainer"></div>
+</body>
+</html>
