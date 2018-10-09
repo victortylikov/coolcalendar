@@ -9,6 +9,17 @@
 </head>
 <body>
     <span th:text="'Number of days: ' + ${monthLength}"></span>
-    <div id="mainContainer"></div>
+    <div id="mainContainer">
+        <div id="tableHeader">
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+            <div class="day">Friday</div>
+            <div class="day">Saturday</div>
+            <div class="day">Sunday</div>
+        </div>
+        <div id="tableBody"></div>
+    </div>
 </body>
 </html>
