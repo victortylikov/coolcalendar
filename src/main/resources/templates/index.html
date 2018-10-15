@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Calendar</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <script type="text/javascript" src="/javascript/dayScript.js"></script>
-
+    <script th:src="@{/javascript/dayScript.js}"></script>
+    <script type="text/javascript" th:inline="javascript">
+        window.onload=function(){
+            document.getElementById("tableBody").addEventListener("load", displayCurrentMonth([[${currentMonthLength}]]));
+        }
+    </script>
 </head>
 <body>
-    <span th:text="'Number of days: ' + ${monthLength}"></span>
+    <span th:text="'Number of days: ' + ${currentMonthLength}"></span>
     <div id="mainContainer">
         <div id="tableHeader">
             <div class="day">Monday</div>
