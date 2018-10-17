@@ -8,15 +8,26 @@
 }
 
 #tableHeader{
-    min-height: 140px;
+    min-height: 70px;
     padding-bottom: 20px;
 }
 
 .day{
-    background: yellow none repeat scroll 0 0;
+    background: #f2f2f2 none repeat scroll 0 0;
     border: 2px solid;
     width: 14%;
     height: 140px;
+    float: left;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.dayName{
+    background: #262626 none repeat scroll 0 0;
+    border: 2px solid;
+    width: 14%;
+    height: 60px;
     float: left;
     display: block;
     max-height: 100%;

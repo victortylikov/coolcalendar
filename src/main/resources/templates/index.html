@@ -7,6 +7,7 @@
     <script th:src="@{/javascript/dayScript.js}"></script>
     <script type="text/javascript" th:inline="javascript">
         window.onload=function(){
+            document.getElementById("tableBody").addEventListener("load", displayPrevMonth([[${prevMonthLength}]],[[${nameOfLastDateOfPrevMonth}]]));
             document.getElementById("tableBody").addEventListener("load", displayCurrentMonth([[${currentMonthLength}]]));
         }
     </script>
@@ -15,13 +16,13 @@
     <span th:text="'Number of days: ' + ${currentMonthLength}"></span>
     <div id="mainContainer">
         <div id="tableHeader">
-            <div class="day">Monday</div>
-            <div class="day">Tuesday</div>
-            <div class="day">Wednesday</div>
-            <div class="day">Thursday</div>
-            <div class="day">Friday</div>
-            <div class="day">Saturday</div>
-            <div class="day">Sunday</div>
+            <div class="dayName">Monday</div>
+            <div class="dayName">Tuesday</div>
+            <div class="dayName">Wednesday</div>
+            <div class="dayName">Thursday</div>
+            <div class="dayName">Friday</div>
+            <div class="dayName">Saturday</div>
+            <div class="dayName">Sunday</div>
         </div>
         <div id="tableBody"></div>
     </div>
