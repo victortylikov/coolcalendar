@@ -1,46 +1,25 @@
-#container{
-    margin: auto;
-    margin-top: 60px;
-    min-height: 700px;
-    height: 80%;
-    min-width: 1200px;
+.container{
     width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 70px [first-line] auto;;
 }
 
-#tableHeader{
-    min-height: 70px;
-    width: 100%;
-    padding-bottom: 20px;
-}
-
-.day{
+.day {
+    min-height: 120px;
     background: #f2f2f2 none repeat scroll 0 0;
-    border: 2px solid;
-    width: 13%;
-    height: 140px;
-    float: left;
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
-    margin: 5px;
 }
 
-.dayName{
+.day-name{
     background: #262626 none repeat scroll 0 0;
-    border: 2px solid;
-    width: 13%;
-    height: 60px;
-    float: left;
-    max-height: 100%;
-    max-width: 100%;
     color: white;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
 }
 
-#monday{
-    vertical-align: middle;
+
+.item{
+    border: 1px solid rgba(0, 0, 0, 0.8);
 }
