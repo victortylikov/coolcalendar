@@ -1,4 +1,4 @@
-#mainContainer{
+#container{
     margin: auto;
     margin-top: 60px;
     min-height: 700px;
@@ -9,27 +9,38 @@
 
 #tableHeader{
     min-height: 70px;
+    width: 100%;
     padding-bottom: 20px;
 }
 
 .day{
     background: #f2f2f2 none repeat scroll 0 0;
     border: 2px solid;
-    width: 14%;
+    width: 13%;
     height: 140px;
     float: left;
     display: block;
     max-height: 100%;
     max-width: 100%;
+    margin: 5px;
 }
 
 .dayName{
     background: #262626 none repeat scroll 0 0;
     border: 2px solid;
-    width: 14%;
+    width: 13%;
     height: 60px;
     float: left;
-    display: block;
     max-height: 100%;
     max-width: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#monday{
+    vertical-align: middle;
 }
