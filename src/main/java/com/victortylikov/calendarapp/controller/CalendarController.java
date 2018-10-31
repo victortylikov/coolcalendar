@@ -34,6 +34,7 @@ public class CalendarController {
         model.put("currentMonthLength", currentMonthLength);
         model.put("prevMonthLength", prevMonthLength);
         model.put("nameOfLastDateOfPrevMonth", nameOfLastDateOfPrevMonth.getValue());
+        model.put("currentMonthName", currentDate.getMonth());
         return "index";
     }
 

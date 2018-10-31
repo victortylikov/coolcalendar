@@ -5,6 +5,7 @@
     <title>Calendar</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script th:src="@{/javascript/dayScript.js}"></script>
+    <script th:src="@{/javascript/createEvent.js}"></script>
     <script type="text/javascript" th:inline="javascript">
         window.onload=function(){
             document.getElementById("grid-container").addEventListener("load", displayPrevMonth([[${prevMonthLength}]],[[${nameOfLastDateOfPrevMonth}]]));
@@ -14,14 +15,26 @@
 </head>
 <body>
     <span th:text="'Number of days: ' + ${currentMonthLength}"></span>
-    <div id="grid-container" class="container">
-            <div class="item day-name">Monday</div>
-            <div class="item day-name">Tuesday</div>
-            <div class="item day-name">Wednesday</div>
-            <div class="item day-name">Thursday</div>
-            <div class="item day-name">Friday</div>
-            <div class="item day-name">Saturday</div>
-            <div class="item day-name">Sunday</div>
+    <div class="calendar-body">
+        <div class="month-name">
+            <span th:text="${currentMonthName}"></span>
+        </div>
+        <div id="grid-container" class="container">
+                <div class="item day-name">Monday</div>
+                <div class="item day-name">Tuesday</div>
+                <div class="item day-name">Wednesday</div>
+                <div class="item day-name">Thursday</div>
+                <div class="item day-name">Friday</div>
+                <div class="item day-name">Saturday</div>
+                <div class="item day-name">Sunday</div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div class="event-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
     </div>
 </body>
 </html>
