@@ -14,6 +14,7 @@
     </script>
 </head>
 <body>
+    <button id="myBtn">Open Modal</button>
     <span th:text="'Number of days: ' + ${currentMonthLength}"></span>
     <div class="calendar-body">
         <div class="month-name">
@@ -30,7 +31,7 @@
         </div>
     </div>
     <!-- The Modal -->
-    <div class="event-modal">
+    <div id="event-modal-id" class="event-modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>Some text in the Modal..</p>

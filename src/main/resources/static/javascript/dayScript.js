@@ -4,7 +4,6 @@ function displayPrevMonth(days, lastDay) {
         for (i = days + 1 - lastDay; i <= days; i++) {
             var blockDiv = document.createElement("div");
             blockDiv.className = "item day";
-            blockDiv.className = "day";
             blockDiv.append(i);
             container.appendChild(blockDiv);
         }
