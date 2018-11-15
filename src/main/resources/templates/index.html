@@ -5,7 +5,7 @@
     <title>Calendar</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script th:src="@{/javascript/dayScript.js}"></script>
-    <script th:src="@{/javascript/createEvent.js}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" th:inline="javascript">
         window.onload=function(){
             document.getElementById("grid-container").addEventListener("load", displayPrevMonth([[${prevMonthLength}]],[[${nameOfLastDateOfPrevMonth}]]));
@@ -33,9 +33,14 @@
     <!-- The Modal -->
     <div id="event-modal-id" class="event-modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+            <div class="event-header">
+                <span id="modal-close-button" class="modal-close">&times;</span>
+            </div>
+            <div class="event-body">
+                <p>Add event</p>
+            </div>
         </div>
     </div>
+    <script th:src="@{/javascript/createEvent.js}"></script>
 </body>
 </html>

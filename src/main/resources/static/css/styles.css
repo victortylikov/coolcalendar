@@ -25,6 +25,7 @@
 .calendar-body{
     width: 80%;
     margin: auto;
+    min-width: 800px;
 }
 
 .month-name{
@@ -49,4 +50,26 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 800px;
+    min-width: 400px;
+}
+
+.modal-close{
+    float: right;
+    padding: 5px;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
